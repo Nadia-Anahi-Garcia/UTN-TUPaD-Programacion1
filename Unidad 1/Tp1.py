@@ -74,16 +74,16 @@ print("*** Tabla de Multiplicar ***")
 numeroTabla = int (input ("Ingrese el número para mostrar su tabla: "))
 # Tabla de multiplicar
 print (f" Tabla del {numeroTabla} : ")
-print (f"{numeroTabla} X 1 = ", numeroTabla * 1)
-print (f"{numeroTabla} X 2 = ", numeroTabla * 2)
-print (f"{numeroTabla} X 3 = ", numeroTabla * 3)
-print (f"{numeroTabla} X 4 = ", numeroTabla * 4)
-print (f"{numeroTabla} X 5 = ", numeroTabla * 5)
-print (f"{numeroTabla} X 6 = ", numeroTabla * 6)
-print (f"{numeroTabla} X 7 = ", numeroTabla * 7)
-print (f"{numeroTabla} X 8 = ", numeroTabla * 8)
-print (f"{numeroTabla} X 9 = ", numeroTabla * 9)
-print (f"{numeroTabla} X 10 = ", numeroTabla * 10)
+print (f"{numeroTabla} X 1 = ", {numeroTabla * 1})
+print (f"{numeroTabla} X 2 = ", {numeroTabla * 2})
+print (f"{numeroTabla} X 3 = ", {numeroTabla * 3})
+print (f"{numeroTabla} X 4 = ", {numeroTabla * 4})
+print (f"{numeroTabla} X 5 = ", {numeroTabla * 5})
+print (f"{numeroTabla} X 6 = ", {numeroTabla * 6})
+print (f"{numeroTabla} X 7 = ", {numeroTabla * 7})
+print (f"{numeroTabla} X 8 = ",{numeroTabla * 8})
+print (f"{numeroTabla} X 9 = ", {numeroTabla * 9})
+print (f"{numeroTabla} X 10 = ", {numeroTabla * 10})
 
 #Ejercicio_7
 # Crear un programa que pida al usuario dos números enteros distintos del 0 y muestre por 
@@ -96,10 +96,10 @@ numero_1 = int (input ("Por favor ingrese el primer número entero distinto a 0:
 numero_2 = int (input ("Por favor ingrese el segundo número entero distinto a 0: "))
 # Operaciones
 print ("*** Los resultados son: ****")
-print (f"Suma:              {numero_1} + {numero_2} = ", numero_1 + numero_2)
-print (f"División:          {numero_1} / {numero_2} = ", numero_1 / numero_2)
-print (f"Multiplicación:    {numero_1} * {numero_2} =", numero_1 * numero_2)
-print (f"Resta:             {numero_1} - {numero_2} =", numero_1 - numero_2)
+print (f"Suma:              {numero_1} + {numero_2} = ", {numero_1 + numero_2})
+print (f"División:          {numero_1} / {numero_2} = ", {numero_1 / numero_2})
+print (f"Multiplicación:    {numero_1} * {numero_2} =", {numero_1 * numero_2})
+print (f"Resta:             {numero_1} - {numero_2} =", {numero_1 - numero_2})
 
 #Ejercicio_8
 # Crear un programa que pida al usuario su altura y su peso e imprima por pantalla su índice 
