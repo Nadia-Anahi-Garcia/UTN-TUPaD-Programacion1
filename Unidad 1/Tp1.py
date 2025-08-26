@@ -42,7 +42,7 @@ import math
 valorPi = math .pi
 
 # Cálculos
-area = valorPi * radio ** 2
+area = valorPi * (radio) ** 2
 perimetro = 2 * valorPi * radio
 
 #Mostramos los resultados 
@@ -57,9 +57,9 @@ print(f"El perímetro del círculo es: {perimetro:.2f}")
 print("*** Conversor de Segundos a Horas ***")
 
 # Entrada de datos
-segundos = int(input("Ingrese la cantidad de segundos que desea convertir: "))
+segundos = float(input("Ingrese la cantidad de segundos que desea convertir: "))
 # Conversión
-horas = segundos / 3600
+horas = round (segundos / 3600, 2)
 #Mostramos los resultados. 
 print (f"{segundos} segundos equivalen a {horas} horas.")
 
@@ -74,16 +74,16 @@ print("*** Tabla de Multiplicar ***")
 numeroTabla = int (input ("Ingrese el número para mostrar su tabla: "))
 # Tabla de multiplicar
 print (f" Tabla del {numeroTabla} : ")
-print (f"{numeroTabla} X 1 = ", {numeroTabla * 1})
-print (f"{numeroTabla} X 2 = ", {numeroTabla * 2})
-print (f"{numeroTabla} X 3 = ", {numeroTabla * 3})
-print (f"{numeroTabla} X 4 = ", {numeroTabla * 4})
-print (f"{numeroTabla} X 5 = ", {numeroTabla * 5})
-print (f"{numeroTabla} X 6 = ", {numeroTabla * 6})
-print (f"{numeroTabla} X 7 = ", {numeroTabla * 7})
-print (f"{numeroTabla} X 8 = ",{numeroTabla * 8})
-print (f"{numeroTabla} X 9 = ", {numeroTabla * 9})
-print (f"{numeroTabla} X 10 = ", {numeroTabla * 10})
+print (f"{numeroTabla} X 1 = , {numeroTabla * 1}")
+print (f"{numeroTabla} X 2 = , {numeroTabla * 2}")
+print (f"{numeroTabla} X 3 = , {numeroTabla * 3}")
+print (f"{numeroTabla} X 4 = , {numeroTabla * 4}")
+print (f"{numeroTabla} X 5 = , {numeroTabla * 5}")
+print (f"{numeroTabla} X 6 = , {numeroTabla * 6}")
+print (f"{numeroTabla} X 7 = , {numeroTabla * 7}")
+print (f"{numeroTabla} X 8 = ,{numeroTabla * 8}")
+print (f"{numeroTabla} X 9 = , {numeroTabla * 9}")
+print (f"{numeroTabla} X 10 = , {numeroTabla * 10}")
 
 #Ejercicio_7
 # Crear un programa que pida al usuario dos números enteros distintos del 0 y muestre por 
@@ -96,10 +96,10 @@ numero_1 = int (input ("Por favor ingrese el primer número entero distinto a 0:
 numero_2 = int (input ("Por favor ingrese el segundo número entero distinto a 0: "))
 # Operaciones
 print ("*** Los resultados son: ****")
-print (f"Suma:              {numero_1} + {numero_2} = ", {numero_1 + numero_2})
-print (f"División:          {numero_1} / {numero_2} = ", {numero_1 / numero_2})
-print (f"Multiplicación:    {numero_1} * {numero_2} =", {numero_1 * numero_2})
-print (f"Resta:             {numero_1} - {numero_2} =", {numero_1 - numero_2})
+print (f"Suma:              {numero_1} + {numero_2} = , {numero_1 + numero_2}")
+print (f"División:          {numero_1} / {numero_2} = , {numero_1 / numero_2}")
+print (f"Multiplicación:    {numero_1} * {numero_2} =, {numero_1 * numero_2}")
+print (f"Resta:             {numero_1} - {numero_2} =, {numero_1 - numero_2}")
 
 #Ejercicio_8
 # Crear un programa que pida al usuario su altura y su peso e imprima por pantalla su índice 
@@ -110,9 +110,9 @@ print ("*** Calculadora de IMC ***")
 altura = float (input ("Ingrese su altura en metros (ej: 1.75): "))
 peso = float (input ("Ingrese su peso en kilogramos: "))
 # Cálculo
-imc = peso / (altura ** 2)
+imc = round(peso / altura ** 2, 2)
 #Mostramos el resultado
-print(f"Su IMC es de {imc:.2f}")
+print(f"Su IMC es de {imc}.")
 
 #Ejercicio_9
 #Crear un programa que pida al usuario una temperatura en grados Celsius e imprima por 
@@ -122,7 +122,7 @@ print ("*** Conversor de Celsius a Fahrenheit***")
 #Solicitamos al usuario la temperatura 
 temCel = float (input ("Ingrese la temperatura en grados Celsius: "))
 #Cálculo de conversión 
-temFahr = (temCel * 1.8) + 32
+temFahr = round ((temCel * 1.8) + 32, 2)
 #Mostramos el resultado
 print (f"{temCel}°C equivalen a  {temFahr:.2f}°F")
 
@@ -135,6 +135,6 @@ num_1 = float(input ("Ingrese el primer número: "))
 num_2 = float(input ("Ingrese el segundo número: "))
 num_3 = float(input ("Ingrese el tercer  número: "))
 #Cálculo de promedio
-promedio=(num_1 + num_2 + num_3)/3
+promedio=round((num_1 + num_2 + num_3)/3, 2)
 #Mostramos el resultado
-print (f"El promedio de los tres números ingresados es de {promedio:.2f}")
+print (f"El promedio de los tres números ingresados es de {promedio}")
