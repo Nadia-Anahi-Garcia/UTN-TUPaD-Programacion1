@@ -112,24 +112,75 @@ else:
 
 
 #Ejercicio 8
-#Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 dependiendo de la opción que desee:
+#Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 
+# dependiendo de la opción que desee:
 #1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.
 #2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.
 #3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.
-#El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el usuario e imprimir el resultado por pantalla
+#El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada 
+# por el usuario e imprimir el resultado por pantalla
 
-nombree = input("Ingrese su nombre:")
-numeroo = int(input("Ingrese un número del 1 al 3:"))
 
-if (numeroo >= 1)  and (numeroo <= 3):
-    if numeroo == 1:
-        print(nombree.upper())
-    elif numeroo == 2:
-        print (nombree.lowe())
+nombre1 = input("Ingrese su nombre:")
+num = int(input(
+    "Ingrese un número según la opción deseada:\n"
+    "1. Nombre en MAYÚSCULAS\n"
+    "2. Nombre en minúsculas\n"
+    "3. Nombre con la primera letra en mayúscula\n"
+    "Opción: "))
+
+if (num >= 1)  and (num <= 3):
+    if num == 1:
+        print(nombre1.upper())
+    elif num == 2:
+        print (nombre1.lower())
     else:
-        print (nombree.title ())
+        print (nombre1.title())
 else:
     print("Ingrese un número correcto")
+
+
+#Ejercicio 9:
+#Escribir un programa que pida al usuario la magnitud de un terremoto, 
+# clasifique la magnitud en una de las siguientes categorías según
+#  la escala de Richter e imprima el resultado por pantalla:
+#● Menor que 3: "Muy leve" (imperceptible).
+#● Mayor o igual que 3 y menor que 4: "Leve" (ligeramente perceptible).
+#● Mayor o igual que 4 y menor que 5: "Moderado" (sentido por personas, pero generalmente no causa daños).
+#● Mayor o igual que 5 y menor que 6: "Fuerte" (puede causar daños en estructuras débiles).
+#● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
+#● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+
+magnitud_terremoto = float(input("Ingrese la magnitud del terremoto: "))
+
+if magnitud_terremoto <= 0: 
+    print ("Por favor, ingrese un número correcto.")
+elif magnitud_terremoto < 3:
+    print("Muy leve (imperceptible)")
+elif (magnitud_terremoto >= 3 ) and (magnitud_terremoto < 4):
+    print("Leve (ligeramente perceptible).")
+elif (magnitud_terremoto >= 4) and (magnitud_terremoto < 5):
+    print ("Moderado (sentido por personas, pero generalmente no causa daños).")
+elif (magnitud_terremoto >= 5) and (magnitud_terremoto < 6): 
+    print ("Fuerte (puede causar daños en estructuras débiles).")
+elif (magnitud_terremoto >= 6) and (magnitud_terremoto < 7): 
+    print ("Muy Fuerte (puede causar daños significativos).")
+else: 
+    print ("Extremo (puede causar graves daños a gran escala).")
+
+
+#Ejercicio 10
+# Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), 
+# qué mes del año es y qué día es. El programa deberá utilizar esa información 
+# para imprimir por pantalla si el usuario se encuentra en otoño, invierno, primavera o verano. 
+
+    
+
+
+
+
+
+
 
 
 
