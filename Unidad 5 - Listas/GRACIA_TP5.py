@@ -189,7 +189,7 @@ lista_numeros = [10, 20, 30, 40, 50, 60, 70]
 # Guardamos el último
 ultimo = lista_numeros[-1]
 # Desplazamos cada elemento una posición a la derecha
-for i in range((lista_numeros) -1, 0, -1):
+for i in range(len(lista_numeros) -1, 0, -1):
     lista_numeros[i] = lista_numeros[i - 1]
 
 # Ponemos el último al inicio
