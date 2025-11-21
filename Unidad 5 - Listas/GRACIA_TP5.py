@@ -46,11 +46,11 @@ for contador in range(5):
 print(f"La lista original de productos es: ")
 for p in productos:
     print(p)
-print(productos)
+
 
 #Mostramos la lista ordenada alfabéticamente
-print("La lista de productos ordenadas es: ")
-print(sorted(productos)) 
+print("\nLa lista de productos ordenada es:")
+productos_ordenados = sorted(productos)
 for p in productos_ordenados:
     print(p)
 
