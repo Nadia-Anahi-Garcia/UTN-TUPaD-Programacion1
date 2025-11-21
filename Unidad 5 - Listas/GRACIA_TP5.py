@@ -44,11 +44,15 @@ for contador in range(5):
 
 #Mostramos la lista original
 print(f"La lista original de productos es: ")
+for p in productos:
+    print(p)
 print(productos)
 
 #Mostramos la lista ordenada alfabéticamente
 print("La lista de productos ordenadas es: ")
 print(sorted(productos)) 
+for p in productos_ordenados:
+    print(p)
 
 #Solicitamos el producto a eliminar y actualizamos la lista
 producto_eliminar=input("¿Qué producto desea eliminar?: ")
@@ -61,8 +65,9 @@ else:
     print(f"El producto {producto_eliminar} no se encuentra en la lista.")
 
 #Mostramos la lista actualizada
-print(f"La lista actualizada de productos es: {productos}")
-
+print(f"La lista actualizada de productos es: ")
+for p in productos:
+    print(p)
 #-----------------------------------------------------------------
 
 
@@ -80,10 +85,16 @@ numeros_pares = []
 numeros_impares = []
 
 #Mostramos la lista de números aleatorios
-for contador in range(15):
+for _ in range(15):
     azar = random.randint(1, 100)
     numeros.append(azar)
 print(f"La lista de números aleatorios es: {numeros}")
+
+# Mostrar lista de números aleatorios con bucle
+print("La lista de números aleatorios es:")
+for n in numeros:
+    print(n, end=" ")
+print("\n")
 
 #Separamos los números pares e impares
 for numero in numeros:
@@ -94,9 +105,15 @@ for numero in numeros:
 
 #Mostramos la cantidad de números que tiene cada lista  
 print(f"La lista de números pares tiene {len(numeros_pares)} números.")
-print(f"Los números pares son {numeros_pares}", end="\n\n")
+print(f"Los números pares son:")
+for n in numeros_pares:
+    print(n, end=" ")
+#mostramos la lista de números impares
 print(f"La lista de números impares tiene {len(numeros_impares)} números.")         
-print(f"La lista de números impares {numeros_impares}", end="\n\n")
+print(f"La números impares son: ")
+for n in numeros_impares:
+    print(n, end=" ")
+print("\n")
 
 
 #-----------------------------------------------------------------
@@ -169,14 +186,19 @@ for i in estudiantes:
 
 lista_numeros = [10, 20, 30, 40, 50, 60, 70]
 
-numero_len = len(lista_numeros)
+# Guardamos el último
+ultimo = lista_numeros[-1]
+# Desplazamos cada elemento una posición a la derecha
+for i in range((lista_numeros) -1, 0, -1):
+    lista_numeros[i] = lista_numeros[i - 1]
 
-for i in range((numero_len -1), 0, -1):
-    lista_numeros[i], lista_numeros[i-1] = lista_numeros[i-1], lista_numeros[i]
+# Ponemos el último al inicio
+lista_numeros[0] = ultimo
 
 print("Lista rotada hacia la derecha:")
 for num in lista_numeros:           
     print(num, end=" ")
+print("\n")
 
 #-----------------------------------------------------------------
 
@@ -217,26 +239,32 @@ notas = [
     [70, 80, 75],   #Estudiante 4
     [95, 89, 94]]   #Estudiante 5
 
-#Mostramos la matriz de notas
+
+# Mostrar matriz de notas
+print("Matriz de notas:")
 for fila in notas:
-    print(fila, end=" ")
-    print()
+    print(fila)
+print()
 
-#Calculamos y mostramos el promedio por estudiante
-suma = 0
-for i in range(5):  # i son los 5 estudiantes
-    for j in range(3): # j son las materias 
+# Promedio por estudiante
+print("Promedio por estudiante:")
+for i in range(5):  # 5 estudiantes
+    suma = 0
+    for j in range(3):  # 3 materias
         suma += notas[i][j]
-        promedio_estudiante = suma / 3
-print(f"El promedio del estudiante {i + 1} es: {promedio_estudiante}")
+    promedio_estudiante = suma / 3
+    print(f"Estudiante {i + 1}: {promedio_estudiante:.2f}")
 
-#Calculamos y mostramos el promedio por materia
-suma_materia = 0
-for j in range(3):
-    for i in range(5):
+print()
+
+# Promedio por materia
+print("Promedio por materia:")
+for j in range(3):  # 3 materias
+    suma_materia = 0
+    for i in range(5):  # 5 estudiantes
         suma_materia += notas[i][j]
-        promedio_materia = suma_materia / 5
-print(f"El promedio de la materia {j + 1} es: {promedio_materia}")
+    promedio_materia = suma_materia / 5
+    print(f"Materia {j + 1}: {promedio_materia:.2f}")
 
 #-----------------------------------------------------------------
 
