@@ -23,7 +23,7 @@ def mostrar_productos():
     with open("productos.txt", "r") as archivo:
         for linea in archivo: #Recorremos y leemos cada línea del archivo.
             datos = linea.strip().split(",") #Le quitamos espacios y separamos los datos 
-            print(f"Producto: {datos[0]} | Precio: $ {datos[1]} | Cantidad: {datos[2]}") #Mostramos. 
+            print(f"Producto: {datos[0]} | Precio: $ {float(datos[1]):.2f} | Cantidad: {datos[2]}") #Mostramos. 
 
 #EJERCICIO N°3
 # Agregar productos desde teclado: Modificar el programa para que luego de mostrar los productos, 
@@ -34,9 +34,16 @@ def mostrar_productos():
 def agregar_producto():
     """Agrega un nuevo producto al archivo productos.txt."""
     nombre = input("Ingrese el nombre del producto: ").lower().strip()
+    
+    #Validamos si el producto ya existe
+    productos_existentes = cargar_productos()
+    for p in productos_existentes:
+        if p["nombre"].strip().lower() == nombre:
+            print(" El producto ya existe. No se puede agregar.")
+            return
     precio = input("Ingrese el precio: ").strip()
     cantidad = input("Ingrese la cantidad: ").strip()
-
+    # Agregamos el nuevo producto al archivo
     with open("productos.txt", "a") as archivo:
         archivo.write (f"{nombre},{precio},{cantidad}\n")
 
@@ -78,7 +85,7 @@ def buscar_producto_por_nombre(productos):
     busqueda = False
     for i in productos:
         if i["nombre"].strip().lower() == buscar_producto:
-            print(f"Producto: {i["nombre"]} | Precio: ${i["precio"]} | Cantidad: {i["cantidad"]}")
+            print(f"Producto: {i['nombre']} | Precio: ${i['precio']} | Cantidad: {i['cantidad']}")
             busqueda = True
             break
     #Si el producto ingresado no esta muestra error 
@@ -94,8 +101,7 @@ def guardar_productos(productos):
     with open("productos.txt", "w") as archivo:
         for p in productos:
             archivo.write(f"{p['nombre']},{p['precio']},{p['cantidad']}\n")
-    print("Productos guardados correctamente.")
-
+    
 # Programa principal
 crear_archivo_inicial() #Crear el archivo inicial si no existe
 
@@ -118,7 +124,7 @@ while True:
         case "4":
             productos = cargar_productos()
             guardar_productos(productos)
-            print(" Productos guardados, saliendo del programa.")
+            print(" Saliendo del programa.")
             break
         case _:
             print("Opción no válida. Por favor, seleccione una opción del 1 al 4.")

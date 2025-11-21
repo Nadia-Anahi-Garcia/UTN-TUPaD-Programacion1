@@ -8,7 +8,7 @@
 def factorial(numero):
     """Calcula recursivamente el factorial de un número entero no negativo."""
     #Caso base: el factorial de 0 es 1
-    if numero == 0:
+    if numero == 0 or numero == 1:
         return 1
     else:
         return numero * factorial(numero-1)
