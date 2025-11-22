@@ -167,7 +167,7 @@ print (f"{segundos_ingresados} segundos, equivale a {segundos_a_horas (segundos_
 
 
 #Definición de función
-def tabla_multiplicar(numero:int):
+def tabla_multiplicar(numero):
     """
     Función que muestra la tabla de multiplicar.
     Args:
@@ -197,7 +197,7 @@ tabla_multiplicar(numero_a_mult)
 
 
 #Definición de función
-def operaciones_basicas(a: int, b: int):
+def operaciones_basicas(a, b):
     """
     Función que hace operación básicas.
     Args:
